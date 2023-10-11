@@ -1,0 +1,66 @@
+---
+import { Button } from "@/components/ui/button";
+import ProjectsCard from "./ProjectsCard.astro";
+---
+
+<!-- Section container -->
+<section id="projects" class="w-full h-full py-12 md:py-24 lg:py-32 bg-gradient-to-t from-neutral-800 to-neutral-900">
+
+	<!--  Div container of content  -->
+    <div class="flex flex-col items-center justify-center gap-3 container w-full">
+
+		<!-- Content header -->
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl flex w-full items-center text-white font-bold text-center pb-4 before:mr-4 before:block before:h-px before:flex-grow before:bg-white after:ml-4 after:block after:h-px after:flex-grow after:bg-white">
+            My Projects
+        </h1>
+
+        <h2 class="text-xl md:text-2xl">Here are some of my projects to date!</h2>
+
+        
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+            <ProjectsCard 
+                cardTitle="Record Rack" 
+                cardImage="/recordrack.png" 
+                cardLink="" 
+                cardTechnologies=".NET 7, React, TypeScript, Tailwind CSS, Docker, AWS, Nginx">
+            </ProjectsCard>
+
+           <ProjectsCard 
+                cardTitle="Record Rack" 
+                cardImage="/recordrack.png" 
+                cardLink="" 
+                cardTechnologies=".NET 7, React, TypeScript, Tailwind CSS, Docker, AWS, Nginx">
+            </ProjectsCard>
+
+            <ProjectsCard 
+                cardTitle="Record Rack" 
+                cardImage="/recordrack.png" 
+                cardLink="" 
+                cardTechnologies=".NET 7, React, TypeScript, Tailwind CSS, Docker, AWS, Nginx">
+            </ProjectsCard>
+
+        </div>
+
+        
+
+    </div>	<!--  Div container of content  -->
+</section>
+
+<script>
+	//Callback function for intersectionObserver API
+	const callback = function (entries: any) {
+		entries.forEach((entry: any) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("animate-slideInUp");
+			}
+		});
+	};
+
+	//Create an observer
+	const observer = new IntersectionObserver(callback);
+
+	//Observe when the selected element enters viewport
+	document.querySelectorAll(".slideIn").forEach(function (target) {
+		observer.observe(target);
+	});
+</script>
