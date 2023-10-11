@@ -7,6 +7,7 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
+        xxs: '390px',
         xs: '475px',
         sm: '640px',
         md: '768px',
@@ -38,7 +39,7 @@ module.exports = {
       },
       animation: {
         text: 'text 5s ease infinite',
-        slideInUp: "slideInUp 1.25s forwards",
+        slideInUp: "slideInUp 1.5s forwards",
         zoomIn: "zoomIn 0.75s",
       },
     },
