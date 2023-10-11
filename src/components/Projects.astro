@@ -17,26 +17,29 @@ import ProjectsCard from "./ProjectsCard.astro";
         <h2 class="text-xl md:text-2xl">Here are some of my projects to date!</h2>
 
         
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="mt-24 w-full grid grid-cols-1 md:grid-cols-2 gap-12">
             <ProjectsCard 
                 cardTitle="Record Rack" 
                 cardImage="/recordrack.png" 
-                cardLink="" 
-                cardTechnologies=".NET 7, React, TypeScript, Tailwind CSS, Docker, AWS, Nginx">
-            </ProjectsCard>
-
-           <ProjectsCard 
-                cardTitle="Record Rack" 
-                cardImage="/recordrack.png" 
-                cardLink="" 
-                cardTechnologies=".NET 7, React, TypeScript, Tailwind CSS, Docker, AWS, Nginx">
+                cardLink="/projects/record-rack" 
+                cardTechnologies=".NET 7, PostgreSQL, React, TypeScript, Tailwind CSS, Docker, AWS, Nginx"
+                cardTransition="record-rack image">
             </ProjectsCard>
 
             <ProjectsCard 
-                cardTitle="Record Rack" 
-                cardImage="/recordrack.png" 
-                cardLink="" 
-                cardTechnologies=".NET 7, React, TypeScript, Tailwind CSS, Docker, AWS, Nginx">
+                cardTitle="OMG Mobile App" 
+                cardImage="/omgmobile.png" 
+                cardLink="/projects/omg-mobile" 
+                cardTechnologies="Dart, Flutter SDK, Firebase (Firestore, Cloud Functions), JavaScript"
+                cardTransition="omg-mobile image">
+            </ProjectsCard>
+
+            <ProjectsCard 
+                cardTitle="Perlin Noise Minecraft Sim" 
+                cardImage="/perlin.png" 
+                cardLink="/projects/perlin-noise-minecraft" 
+                cardTechnologies="C#, Unity, WebGL"
+                cardTransition="perlin-noise image">
             </ProjectsCard>
 
         </div>

@@ -14,25 +14,48 @@ const { cardTitle, cardTechnologies, cardImage, cardLink, cardTransition } = Ast
 
 ---
 
-<Card className="dark:bg-neutral-950 shadow-md hover:shadow-xl transition-all duration-100 ">
-    <CardHeader>
-        <img 
-            src={cardImage}
-            alt="record rack" 
-            transition:name={`${cardTransition}`}
-        />
-        <CardTitle>
-            <p class="mt-6 text-3xl font-semibold tracking-normal">{cardTitle}</p>
-        </CardTitle>
-        <CardDescription>
-            <p class="text-neutral-700 font-normal">{cardTechnologies}</p>
-        </CardDescription>
-    </CardHeader>
-    <CardContent>
-        <a href={cardLink} class="w-full flex flex-row gap-2 items-center">
-            <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
-                View Project Info
-            </Button>
-        </a>
-    </CardContent>
-</Card>
+<div class="slideIn">
+    <Card className="dark:bg-neutral-950 shadow-md hover:shadow-xl transition-all duration-100 ">
+        <CardHeader>
+            <img 
+                src={cardImage}
+                alt="record rack" 
+                transition:name={`${cardTransition}`}
+            />
+            <CardTitle>
+                <p class="mt-6 text-3xl font-semibold tracking-normal">{cardTitle}</p>
+            </CardTitle>
+            <CardDescription>
+                <p class="text-neutral-700 font-normal">{cardTechnologies}</p>
+            </CardDescription>
+        </CardHeader>
+        <CardContent>
+            <a href={cardLink} class="w-full flex flex-row gap-2 items-center">
+                <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
+                    View Project Info
+                </Button>
+            </a>
+        </CardContent>
+    </Card>
+    
+</div>
+
+
+<script>
+	//Callback function for intersectionObserver API
+	const callback = function (entries: any) {
+		entries.forEach((entry: any) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("animate-slideInUp");
+			}
+		});
+	};
+
+	//Create an observer
+	const observer = new IntersectionObserver(callback);
+
+	//Observe when the selected element enters viewport
+	document.querySelectorAll(".slideIn").forEach(function (target) {
+		observer.observe(target);
+	});
+</script>
