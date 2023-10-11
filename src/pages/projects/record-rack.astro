@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '@/styles/globals.css'
+import Hero from '@/components/Hero.astro';
+import Navbar from '@/components/Navbar.astro';
+import About from '@/components/About.astro';
+import Projects from '@/components/Projects.astro';
+
+---
+
+<Layout title="Welcome to Astro.">
+    <p id="header" class="hidden"></p>
+	<div class="w-full h-screen flex flex-col items-center bg-neutral-900 ">
+        <div class="w-full h-full flex flex-col container justify-center gap-12">
+            <div class="flex flex-row items-center gap-12">
+                <img 
+                transition:name={`record-rack image`}
+                src="/recordrack.png" 
+                alt="record rack" 
+                class="w-[50%] rounded-lg shadow-xl">
+
+                <div class="w-full grid grid-cols-3 gap-6 justify-items-center">
+                    <p class="w-full p-2 bg-neutral-800 shadow-xl rounded-lg text-neutral-100 font-semibold text-lg text-center hover:-translate-y-1 transition-all duration-200">.NET 7</p>
+                    <p class="w-full p-2 bg-neutral-800 shadow-xl rounded-lg text-neutral-100 font-semibold text-lg text-center hover:-translate-y-1 transition-all duration-200">PostgreSQL</p>
+                    <p class="w-full p-2 bg-neutral-800 shadow-xl rounded-lg text-neutral-100 font-semibold text-lg text-center hover:-translate-y-1 transition-all duration-200">React</p>
+                    <p class="w-full p-2 bg-neutral-800 shadow-xl rounded-lg text-neutral-100 font-semibold text-lg text-center hover:-translate-y-1 transition-all duration-200">TypeScript</p>
+                    <p class="w-full p-2 bg-neutral-800 shadow-xl rounded-lg text-neutral-100 font-semibold text-lg text-center hover:-translate-y-1 transition-all duration-200">Tailwind CSS</p>
+                    <p class="w-full p-2 bg-neutral-800 shadow-xl rounded-lg text-neutral-100 font-semibold text-lg text-center hover:-translate-y-1 transition-all duration-200">Docker</p>
+                    <p class="w-full p-2 bg-neutral-800 shadow-xl rounded-lg text-neutral-100 font-semibold text-lg text-center hover:-translate-y-1 transition-all duration-200">AWS EC2/RDS</p>
+                    <p class="w-full p-2 bg-neutral-800 shadow-xl rounded-lg text-neutral-100 font-semibold text-lg text-center hover:-translate-y-1 transition-all duration-200">Nginx</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-2">
+                    <h1 class="text-5xl font-bold">Record Rack</h1>
+                    <h2 class="text-3xl font-normal">
+                        <a href="https://recordrack.ca" class="text-neutral-300 hover:border-b-4 hover:border-neutral-300 transition-all duration-75">
+                            Live Link
+                        </a> 
+                        | 
+                        <a href="https://github.com/ataverascrespo/RecordRack" class="text-neutral-300 hover:border-b-4 hover:border-neutral-300 transition-all duration-75">
+                            Github Repo
+                        </a>
+                    </h2>
+                </div>
+                <p class="font-light text-2xl leading-relaxed">
+                    Record Rack is a full-stack, progressive web app. Users can create accounts, then curate a digital collection of their favourite albums and tracks, powered by Spotify Web API integration. Users can also discover/follow other users, view their albums/tracks, and leave likes on their collection.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</Layout>

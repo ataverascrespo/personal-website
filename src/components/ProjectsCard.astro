@@ -7,27 +7,32 @@ interface Props {
     cardTechnologies: string;
     cardImage: string;
     cardLink: string;
+    cardTransition: string;
 }
 
-const { cardTitle, cardTechnologies, cardImage, cardLink } = Astro.props;
+const { cardTitle, cardTechnologies, cardImage, cardLink, cardTransition } = Astro.props;
 
 ---
 
-<Card className="dark:bg-neutral-950">
+<Card className="dark:bg-neutral-950 shadow-md hover:shadow-xl transition-all duration-100 ">
     <CardHeader>
-        <img src={cardImage}/>
+        <img 
+            src={cardImage}
+            alt="record rack" 
+            transition:name={`${cardTransition}`}
+        />
         <CardTitle>
-            <p class="text-3xl font-semibold tracking-normal">{cardTitle}</p>
+            <p class="mt-6 text-3xl font-semibold tracking-normal">{cardTitle}</p>
         </CardTitle>
         <CardDescription>
             <p class="text-neutral-700 font-normal">{cardTechnologies}</p>
         </CardDescription>
     </CardHeader>
     <CardContent>
-        <a href="" class="w-full flex flex-row gap-2 items-center">
+        <a href={cardLink} class="w-full flex flex-row gap-2 items-center">
             <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
                 View Project Info
             </Button>
-          </a>
+            </a>
     </CardContent>
 </Card>
