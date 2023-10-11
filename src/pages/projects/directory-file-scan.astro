@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '@/styles/globals.css'
+import { Button } from '@/components/ui/button';
+
+---
+
+<Layout title="Alex Taveras-Crespo">
+    <p id="header" class="hidden"></p>
+
+    <div class="w-full h-full md:h-screen flex flex-col items-center justify-center bg-neutral-900 py-24 lg:py-0">
+        <div class="w-full h-full flex flex-col container justify-center items-center gap-12">
+            <div class="flex flex-col justify-center items-center gap-8">
+                <div class="flex flex-col justify-center items-center gap-6">
+                    <!-- Project Image -->
+                    <img 
+                    transition:name={`file-scan image`}
+                    src="/file-scan.png" 
+                    alt="C File Scan"
+                    class="w-full md:w-[50%] rounded-lg shadow-xl">
+                    
+                    <div class="w-full md:w-1/2 flex flex-row gap-4">
+                        <!-- Project links -->
+                        <a href="https://github.com/ataverascrespo/directory-file-scan" class="w-full flex flex-row gap-2 items-center">
+                            <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
+                                Github Repo
+                            </Button>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="w-full flex flex-col gap-2 items-center text-center">
+                    <!-- Name -->
+                    <h1 class="text-4xl md:text-6xl font-extrabold">C Directory File Scan</h1>
+                
+                    <div class="flex flex-col gap-6 items-center ">
+                        <!-- Technologies used -->
+                        <h2 class="text-xl md:text-2xl font-normal text-neutral-600">C, Linux</h2> 
+                        <!-- Description -->
+                        <p class="font-normal text-lg md:text-xl leading-relaxed max-w-4xl">
+                            This project was created for the Systems Programming course at Trent University.  I'll admit, compared to some of my peers, I'm for sure not a wizard with C. But this assignment was a lot of fun and made me enjoy figuring out solutions for low-level tasks like this. 
+                        </p>
+                        <!-- Description -->
+                        <p class="font-normal text-lg md:text-xl leading-relaxed max-w-4xl">
+                            The task of this assignment was to pass a target directory to the command line, which would then return 4 files meeting specific criteria (i.e largest or youngest). It prints them in ls -l format. 
+                        </p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</Layout>
