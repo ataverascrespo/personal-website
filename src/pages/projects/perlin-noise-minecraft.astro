@@ -8,22 +8,27 @@ import { Button } from '@/components/ui/button';
 <Layout title="Alex Taveras-Crespo">
     <p id="header" class="hidden"></p>
 
-    <div class="w-full h-full md:h-screen flex flex-col items-center justify-center bg-neutral-900 py-24 lg:py-0">
+    <div class="w-full h-screen flex flex-col items-center justify-center bg-neutral-900 ">
         <div class="w-full h-full flex flex-col container justify-center items-center gap-12">
             <div class="flex flex-col justify-center items-center gap-8">
                 <div class="flex flex-col justify-center items-center gap-6">
                     <!-- Project Image -->
                     <img 
-                    transition:name={`omg-mobile image`}
-                    src="/omgmobile.png" 
-                    alt="omg-mobile"
+                    transition:name={`perlin-noise image`}
+                    src="/perlin.png" 
+                    alt="Perlin Noise Minecraft"
                     class="w-full md:w-[50%] rounded-lg shadow-xl">
                     
                     <div class="w-full md:w-1/2 flex flex-row gap-4">
                         <!-- Project links -->
-                        <a href="/OMGMobilePresentation.pdf" class="w-full flex flex-row gap-2 items-center">
+                        <a href="https://ataverascrespo.itch.io/minecraft-perlin-noise" class="w-full flex flex-row gap-2 items-center">
                             <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
-                                OMG Mobile Presentation
+                                Live Demo
+                            </Button>
+                        </a>
+                        <a href="https://github.com/ataverascrespo/PerlinNoiseTerrain" class="w-full flex flex-row gap-2 items-center">
+                            <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
+                                Github Repo
                             </Button>
                         </a>
                     </div>
@@ -32,18 +37,18 @@ import { Button } from '@/components/ui/button';
 
                 <div class="w-full flex flex-col gap-2 items-center text-center">
                     <!-- Name -->
-                    <h1 class="text-3xl md:text-6xl font-extrabold">OMG Mobile App</h1>
+                    <h1 class="text-4xl md:text-6xl font-extrabold">OMG Mobile App</h1>
                 
                     <div class="flex flex-col gap-6 items-center ">
                         <!-- Technologies used -->
                         <h2 class="text-xl md:text-2xl font-normal text-neutral-600">Dart, Flutter, Firebase (Firestore, Cloud Functions), JavaScript, Stripe API </h2> 
                         <!-- Description -->
                         <p class="font-normal text-lg md:text-xl leading-relaxed max-w-4xl">
-                            OMG Mobile is a cross-platform, modern mobile app created for a local restaurant client, delivered as part of COIS 4000Y: Software Engineering's capstone group project at Trent University. The client was looking to improve their online presence, increase customer retention, and stay competitive.
+                            This is a Unity game which allows the user to generate and manipulate a Minecraft-style terrain with mountains, valleys, and water bodies, which I created as my end-of-course project for COIS 4480: Computer Graphics at Trent. This was one of my favourite Trent projects, I learned a lot about algorithms in the application of interactive media and video games.
                         </p>
                         <!-- Description -->
                         <p class="font-normal text-lg md:text-xl leading-relaxed max-w-4xl">
-                            I won't lie - between a TA job, ~20 hours/wk of software dev work, and 9 other courses, this was a tough project. But it felt so satisfying watching it grow and adding big contributions to such a meaningful product. After 8 months of work, both the client and our professor were extremely impressed with the final product - resulting in a final grade of 96% in the course. 
+                            It implements the Perlin Noise algorithm, taking a flat plane of blocks and giving each row and column (x and z axis) a wavelength that is gradually consistent with neighbouring rows/columns. That creates the illusion of a height map!
                         </p>
                     </div>
                 </div>
