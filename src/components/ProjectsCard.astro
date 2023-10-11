@@ -1,0 +1,33 @@
+---
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "./ui/button";
+
+interface Props {
+	cardTitle: string;
+    cardTechnologies: string;
+    cardImage: string;
+    cardLink: string;
+}
+
+const { cardTitle, cardTechnologies, cardImage, cardLink } = Astro.props;
+
+---
+
+<Card className="dark:bg-neutral-950">
+    <CardHeader>
+        <img src={cardImage}/>
+        <CardTitle>
+            <p class="text-3xl font-semibold tracking-normal">{cardTitle}</p>
+        </CardTitle>
+        <CardDescription>
+            <p class="text-neutral-700 font-normal">{cardTechnologies}</p>
+        </CardDescription>
+    </CardHeader>
+    <CardContent>
+        <a href="" class="w-full flex flex-row gap-2 items-center">
+            <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
+                View Project Info
+            </Button>
+          </a>
+    </CardContent>
+</Card>
