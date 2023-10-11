@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
                 Alex Taveras-Crespo
             </h1>
             <!-- Paragraph with type writer effect -->
-            <p class="text-xl xl:text-5xl font-extralight ">
+            <p class="text-2xl md:text-3xl xl:text-5xl font-extralight ">
               I'm a 
               <!-- Type writer effect span -->
               <span id="header"></span>
@@ -23,13 +23,13 @@ import { Button } from "@/components/ui/button";
 
             <!-- Div for buttons -->
             <div class="flex flex-col sm:flex-row gap-2 mt-3">
-              <Button variant={"secondary"} size={"sm"} className="w-full sm:w-1/2 lg:w-1/5 hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
+              <Button variant={"secondary"} size={"sm"} className="w-full sm:w-1/2 lg:w-1/4 xl:w-1/5 hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
                 <a href="https://github.com/ataverascrespo" class="flex flex-row gap-2 items-center p-4">
                   <p>Find me on</p>
                   <img src="/github.svg" alt="github">
                 </a>
               </Button>
-              <Button variant={"secondary"} size={"sm"} className="w-full sm:w-1/2 lg:w-1/5 hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
+              <Button variant={"secondary"} size={"sm"} className="w-full sm:w-1/2 lg:w-1/4 xl:w-1/5 hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
                 <a href="https://www.linkedin.com/in/alex-taveras-crespo/" class="flex flex-row gap-2 items-center p-4">
                   <p>Connect via</p>
                   <img src="/linkedIn.svg" alt="github">
@@ -73,6 +73,8 @@ import { Button } from "@/components/ui/button";
   function type() {
     currentWord = words[i];
     if (isDeleting) {
+      var element = document.getElementById("header");
+      element!.textContent = "";
       // If in deleting mode, update the text content by removing the last character
       document.getElementById("header")!.textContent = currentWord.substring(0, j-1);
       j--;
@@ -95,8 +97,8 @@ import { Button } from "@/components/ui/button";
         isDeleting = true;
       }
     }
-    setTimeout(type, 100);
+    setTimeout(type, 120);
   }
-  
+
   type();
   </script>
