@@ -1,7 +1,8 @@
 ---
-import { Button } from '@/components/ui/button';
 import Layout from '../../layouts/Layout.astro';
 import '@/styles/globals.css'
+import { Button } from '@/components/ui/button';
+
 ---
 
 <Layout title="Alex Taveras-Crespo">
@@ -13,21 +14,16 @@ import '@/styles/globals.css'
                 <div class="flex flex-col justify-center items-center gap-6">
                     <!-- Project Image -->
                     <img 
-                    transition:name={`record-rack image`}
-                    src="/recordrack.png" 
-                    alt="record-rack" 
+                    transition:name={`omg-mobile image`}
+                    src="/omgmobile.png" 
+                    alt="omg-mobile"
                     class="w-full md:w-[50%] rounded-lg shadow-xl">
                     
                     <div class="w-full md:w-1/2 flex flex-row gap-4">
                         <!-- Project links -->
-                        <a href="https://recordrack.ca" class="w-full flex flex-row gap-2 items-center">
+                        <a href="/OMGMobilePresentation.pdf" class="w-full flex flex-row gap-2 items-center">
                             <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
-                                recordrack.ca
-                            </Button>
-                        </a>
-                        <a href="https://github.com/ataverascrespo/RecordRack" class="w-full flex flex-row gap-2 items-center">
-                            <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
-                                Github Repo
+                                OMG Mobile Presentation
                             </Button>
                         </a>
                     </div>
@@ -36,20 +32,20 @@ import '@/styles/globals.css'
 
                 <div class="w-full flex flex-col gap-2 items-center text-center">
                     <!-- Name -->
-                    <h1 class="text-4xl md:text-6xl font-extrabold">Record Rack</h1>
+                    <h1 class="text-4xl md:text-6xl font-extrabold">OMG Mobile App</h1>
                 
                     <div class="flex flex-col gap-6 items-center ">
                         <!-- Technologies used -->
-                        <h2 class="text-xl md:text-2xl font-normal text-neutral-600">.NET 7, PostgreSQL, React, TypeScript, Tailwind CSS, Docker, AWS EC2/RDS, Nginx</h2> 
+                        <h2 class="text-xl md:text-2xl font-normal text-neutral-600">Dart, Flutter, Firebase (Firestore, Cloud Functions), JavaScript, Stripe API </h2> 
                         <!-- Description -->
                         <p class="font-light text-lg md:text-xl leading-relaxed max-w-4xl">
-                            Record Rack is a full-stack, progressive web app. Users can create accounts, then curate a digital collection of their favourite albums and tracks, powered by Spotify Web API integration. Users can also discover/follow other users, view their albums/tracks, and leave likes on their collection.
+                            OMG Mobile is a cross-platform, modern mobile app created for a local restaurant client, delivered as part of COIS 4000Y: Software Engineering's capstone group project at Trent University. The client was looking to improve their online presence, increase customer retention, and stay competitive. After 8 months of work, both the client and our professor were extremely impressed with the final product - resulting in a final grade of 96% in the course.
                         </p>
                     </div>
                 </div>
+
+                
             </div>
         </div>
     </div>
 </Layout>
-
-
