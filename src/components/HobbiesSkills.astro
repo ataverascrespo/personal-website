@@ -1,0 +1,44 @@
+---
+import { Prism } from "@astrojs/prism";
+import "prismjs/components/prism-json"; // need this;
+
+---
+
+<Prism
+    lang="json"
+    code={`{
+    "skills": [
+        {
+            "name": "languages",
+            "values": ["Java", "C#", "JavaScript", "TypeScript", "Dart", "HTML", "CSS", "Python", "SQL", "Bash"]
+        },
+        {
+            "name": "frameworks_and_libraries",
+            "values": [".NET", "React", "Maven", "Flutter", "Vaadin", "Tailwind", "Astro", "JUnit", "XUnit", "AlpineJS"]
+        },
+        {
+            "name": "databases",
+            "values": ["MySQL", "PostgreSQL", "Firebase", "Oracle SQL Developer"]
+        },
+        {
+            "name": "developer_tools",
+            "values": ["Git", "Azure DevOps", "AWS", "Docker"]
+        }
+    ],
+    "hobbies": [
+        {
+            "name": "entertainment",
+            "values": ["Listening to music", "Collecting vinyl records", "Video games"]
+        },
+        {
+            "name": "creativity",
+            "values": ["Art & museums", "Cooking", "Fashion & streetwear"]
+        },
+        {
+            "name": "sports",
+            "values": ["Basketball", "Baseball", "Football"]
+        }
+    ]
+}`}
+    class="slideIn rounded-xl border-neutral-600 border-2"
+/>

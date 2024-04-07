@@ -10,5 +10,8 @@ export default defineConfig({
     tailwind({
     applyBaseStyles: false,
     }),
-    react()]
+    react()],
+  markdown: {
+    syntaxHighlight: 'prism',
+  },
 });
