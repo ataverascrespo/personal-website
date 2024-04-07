@@ -19,11 +19,11 @@ const { cardTitle, cardTechnologies, cardImage, cardLink, cardTransition } = Ast
         <CardHeader>
             <img 
                 src={cardImage}
-                alt="record rack" 
+                alt="project" 
                 transition:name={`${cardTransition}`}
             />
             <CardTitle>
-                <p class="mt-6 text-3xl font-semibold tracking-normal">{cardTitle}</p>
+                <p class="mt-6 text-xl sm:text-2xl md:text-3xl font-semibold tracking-normal">{cardTitle}</p>
             </CardTitle>
             <CardDescription>
                 <p class="text-neutral-300 font-normal">{cardTechnologies}</p>
