@@ -102,11 +102,17 @@ import json from '@/data/particleOptions.json';
 
 
 <script>
-  import { tsParticles } from 'tsparticles-engine'
-  import { loadFull } from 'tsparticles'
-  ;(async () => {
-    await loadFull(tsParticles)
-  })()
+  import { type Container, type Engine, tsParticles } from "tsparticles-engine";
+  import { loadFull } from 'tsparticles';
+  
+  
+    window.particlesInit = async function (tsParticles: Engine) {
+        await loadFull(tsParticles);
+    }
+    
+    window.particlesLoaded = function (container: Container) {
+        console.log("particlesLoaded callback");
+    }
 </script>
 
 <script>
