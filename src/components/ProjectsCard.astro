@@ -15,7 +15,7 @@ const { cardTitle, cardTechnologies, cardImage, cardLink, cardTransition } = Ast
 ---
 
 <div class="slideIn">
-    <Card className="dark:bg-neutral-950 shadow-md hover:shadow-xl transition-all duration-100 ">
+    <Card className="dark:bg-neutral-800 shadow-md hover:shadow-xl transition-all duration-100 ">
         <CardHeader>
             <img 
                 src={cardImage}
@@ -31,7 +31,7 @@ const { cardTitle, cardTechnologies, cardImage, cardLink, cardTransition } = Ast
         </CardHeader>
         <CardContent>
             <a href={cardLink} class="w-full flex flex-row gap-2 items-center">
-                <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
+                <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md dark:bg-neutral-900">
                     View Project Info
                 </Button>
             </a>
