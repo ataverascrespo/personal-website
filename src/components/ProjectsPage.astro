@@ -2,8 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import '@/styles/globals.css'
 import { Button } from '@/components/ui/button';
-import AstroParticles from 'astro-particles'
-import json from '@/data/particleOptions.json';
 
 interface Props {
 	pageTitle: string;
@@ -23,7 +21,6 @@ const { pageTitle, pageImage, pageAlt, pageTechnologies, pageLinkOne, pageLinkTw
 
 <Layout title="Alex Taveras-Crespo">
     <p id="header" class="hidden"></p>
-    <AstroParticles id="tsparticles" options={json} init="particlesInit"/>
 
     <div class="w-full h-full flex flex-col items-center justify-center pb-24">
 
@@ -78,17 +75,3 @@ const { pageTitle, pageImage, pageAlt, pageTechnologies, pageLinkOne, pageLinkTw
         </div>
     </div>
 </Layout>
-
-<script>
-    import { type Container, type Engine, tsParticles } from "tsparticles-engine";
-    import { loadFull } from 'tsparticles';
-    
-    
-      window.particlesInit = async function (tsParticles: Engine) {
-          await loadFull(tsParticles);
-      }
-      
-      window.particlesLoaded = function (container: Container) {
-          console.log("particlesLoaded callback");
-      }
-</script>

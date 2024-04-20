@@ -1,7 +1,8 @@
 ---
 import ChromeToolTip from "@/components/ChromeToolTip";
 import { ViewTransitions } from "astro:transitions";
-
+import AstroParticles from 'astro-particles'
+import json from '@/data/particleOptions.json';
 interface Props {
 	title: string;
 }
@@ -22,6 +23,7 @@ const { title } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body>
+		<AstroParticles id="tsparticles" options={json} init="particlesInit"/>
 		<slot />
 	</body>
 
@@ -56,3 +58,17 @@ const { title } = Astro.props;
 			monospace;
 	}
 </style>
+
+<script>
+    import { type Container, type Engine, tsParticles } from "tsparticles-engine";
+    import { loadFull } from 'tsparticles';
+    
+    
+      window.particlesInit = async function (tsParticles: Engine) {
+          await loadFull(tsParticles);
+      }
+      
+      window.particlesLoaded = function (container: Container) {
+          console.log("particlesLoaded callback");
+      }
+</script>
