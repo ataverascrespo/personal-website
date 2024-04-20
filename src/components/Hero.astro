@@ -1,5 +1,7 @@
 ---
 import { Button } from "@/components/ui/button";
+import AstroParticles from "astro-particles";
+import json from '@/data/particleOptions.json';
 ---
 
 <!-- Overall section container -->
@@ -8,6 +10,7 @@ import { Button } from "@/components/ui/button";
   class="w-full h-[100vh] py-12 md:py-32 container flex flex-col justify-center md:justify-start"
 >
   <div>
+		<AstroParticles id="tsparticles" options={json} init="particlesInit"/>
 
     <!-- Div container for hero content -->
     <div class="flex flex-row items-center justify-center md:justify-start">
