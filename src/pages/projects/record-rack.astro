@@ -1,59 +1,29 @@
 ---
-import { Button } from '@/components/ui/button';
 import Layout from '../../layouts/Layout.astro';
 import '@/styles/globals.css'
+import ProjectsPage from '@/components/ProjectsPage.astro';
 ---
 
-<Layout title="Alex Taveras-Crespo">
+<Layout title="Alex Taveras-Crespo - Record Rack">
     <p id="header" class="hidden"></p>
+    <ProjectsPage
+        pageTitle='Record Rack'
+        pageImage='/recordrack.png'
+        pageAlt='record-rack'
+        pageTechnologies='.NET 7, PostgreSQL, React, TypeScript, Tailwind CSS, Docker, AWS EC2/RDS, Nginx'
+        pageLinkOne='https://recordrack.ca'
+        pageLinkOneText='recordrack.ca'
+        pageLinkTwo='https://github.com/ataverascrespo/RecordRack'
+        pageLinkTwoText='GitHub Repo'
+        pageDescription=`Record Rack is a full-stack, progressive web app I've been developing for 2 years now. Users can create accounts, then curate a digital collection of their favourite albums and tracks, powered by Spotify Web API integration. Users can also discover/follow other users, view their albums/tracks, and leave likes on their collection. <br><br>
 
-    <div class="w-full h-full flex flex-col items-center justify-center bg-neutral-900 py-24">
-        <div class="w-full h-full flex flex-col container justify-center items-center gap-12">
-            <div class="flex flex-col justify-center items-center gap-8">
-                <div class="flex flex-col justify-center items-center gap-6">
-                    <!-- Project Image -->
-                    <img 
-                    transition:name={`record-rack image`}
-                    src="/recordrack.png" 
-                    alt="record-rack" 
-                    class="w-full md:w-[50%] rounded-lg shadow-xl">
-                    
-                    <div class="w-full md:w-1/2 flex flex-row gap-4">
-                        <!-- Project links -->
-                        <a href="https://recordrack.ca" class="w-full flex flex-row gap-2 items-center">
-                            <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
-                                recordrack.ca
-                            </Button>
-                        </a>
-                        <a href="https://github.com/ataverascrespo/RecordRack" class="w-full flex flex-row gap-2 items-center">
-                            <Button variant={"secondary"} size={"sm"} className="w-full  hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
-                                Github Repo
-                            </Button>
-                        </a>
-                    </div>
-                </div>
+        I used C# and .NET 7 to build a REST API with OAuth 2.0 authorization. It interacts securely with a PostgreSQL database. I've also integrated some 3rd party APIs, namely Cloudinary for image storage, Twilio Sendgrid for emails, and Spotify to provide all the music.  The API is containerized in a Docker container, and deployed onto an AWS EC2 instance, secured with NGINX load balancing and SSL certificates. The PostgreSQL database is managed through AWS RDS. However I am in the process of re-deploying onto Google Cloud Platform just due to costs.   <br><br>
 
+        The front-end is a Progressive Web App built with React and TypeScript, designed with Tailwind CSS and shadcn/ui components. I'm using Mobx as the global state management framework.<br><br>
 
-                <div class="w-full flex flex-col gap-2 items-center text-center">
-                    <!-- Name -->
-                    <h1 class="text-4xl md:text-6xl font-extrabold">Record Rack</h1>
-                
-                    <div class="flex flex-col gap-6 items-center ">
-                        <!-- Technologies used -->
-                        <h2 class="text-xl md:text-2xl font-normal text-neutral-600">.NET 7, PostgreSQL, React, TypeScript, Tailwind CSS, Docker, AWS EC2/RDS, Nginx</h2> 
-                        <!-- Description -->
-                        <p class="font-normal text-lg md:text-xl leading-relaxed max-w-4xl">
-                            Record Rack is a full-stack, progressive web app. Users can create accounts, then curate a digital collection of their favourite albums and tracks, powered by Spotify Web API integration. Users can also discover/follow other users, view their albums/tracks, and leave likes on their collection.
-                        </p>
-                        <!-- Description -->
-                        <p class="font-normal text-lg md:text-xl leading-relaxed max-w-4xl">
-                            It is a project that I care a lot about, having worked on it for about a year beginning in September 2022. If you're interested, go sign up! Nothing makes me happier than seeing people use it.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        Through this project, I learned relevant practices such MVC architecture, dependency injection, OAuth 2.0 integration, REST API design, React development, Docker deployment, and AWS services. `
+        pageTransition='record-rack image'>
+    </ProjectsPage>
 </Layout>
 
 
