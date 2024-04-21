@@ -16,7 +16,6 @@ import ProjectsCard from "./ProjectsCard.astro";
 
         <h2 class="text-xl md:text-2xl text-center">Some of my projects, including academic and personal projects.</h2>
 
-        
         <div class="mt-24 w-full grid grid-cols-1 md:grid-cols-2 gap-12">
             <ProjectsCard 
                 cardTitle="Record Rack" 
@@ -35,6 +34,14 @@ import ProjectsCard from "./ProjectsCard.astro";
             </ProjectsCard>
 
             <ProjectsCard 
+                cardTitle="Gen-EVA - OPS/Microsoft Hackathon" 
+                cardImage="/gen-eva.png" 
+                cardLink="/projects/gen-eva" 
+                cardTechnologies="Azure AI, OpenAI GPT-4 LLM, .NET 8, Cosmos DB"
+                cardTransition="gen-eva image">
+            </ProjectsCard>
+
+            <ProjectsCard 
                 cardTitle="Perlin Noise Minecraft Sim" 
                 cardImage="/perlin.png" 
                 cardLink="/projects/perlin-noise-minecraft" 
@@ -49,16 +56,6 @@ import ProjectsCard from "./ProjectsCard.astro";
                 cardTechnologies="C, Linux"
                 cardTransition="file-scan image">
             </ProjectsCard>
-
-            <ProjectsCard 
-                cardTitle="Gen-EVA - OPS/Microsoft Hackathon" 
-                cardImage="/gen-eva.png" 
-                cardLink="/projects/gen-eva" 
-                cardTechnologies="Azure AI, OpenAI GPT-4 LLM, .NET 8, Cosmos DB"
-                cardTransition="gen-eva image">
-            </ProjectsCard>
-
-
         </div>
 
         
