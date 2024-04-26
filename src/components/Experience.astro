@@ -1,0 +1,104 @@
+---
+import ExperiencePosition from "./ExperiencePosition.astro";
+import ProjectsCard from "./ProjectsCard.astro";
+import { Button } from "./ui/button";
+---
+
+<!-- Section container -->
+<section id="projects" class="w-full h-full py-12 md:py-24 lg:py-32">
+
+	<!--  Div container of content  -->
+    <div class="flex flex-col items-center justify-center gap-3 container w-full">
+
+		<!-- Content header -->
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl flex w-full items-center text-white font-bold text-center pb-4 before:mr-4 before:block before:h-px before:flex-grow before:bg-white after:ml-4 after:block after:h-px after:flex-grow after:bg-white">
+            Experience
+        </h1>
+
+        <Button
+            variant={"secondary"}
+            size={"sm"}
+            className="w-3/4 md:w-1/3 hover:-translate-y-1 duration-200 transition-all hover:shadow-md"
+          >
+            <a
+              href="https://www.linkedin.com/in/alex-taveras-crespo/details/experience/"
+              class="flex flex-row gap-2 items-center p-4"
+            >
+              <p class="text-xs md:text-base">More info on my</p>
+              <img src="/linkedIn.svg" alt="github" />
+            </a>
+        </Button>
+
+        <div class="mt-24 w-full grid grid-cols-1 gap-12">
+            <ExperiencePosition
+                companyTitle="Government of Ontario"
+                companyLink="https://www.ontario.ca/page/ministry-children-community-and-social-services"
+                positionTitle="Software/DevOps Developer"
+                positionDates="Aug 2023 - Present"
+                companyImage="/experience/OntarioGov.png"
+                companyImageAlt="Government of Ontario"
+            >
+            </ExperiencePosition>
+
+            <ExperiencePosition
+                companyTitle="Daystar Limited"
+                companyLink="https://www.daystarlimited.com/"
+                positionTitle="Software Developer Intern"
+                positionDates="Apr 2022 - Aug 2023, PT Sep 2022 - Apr 2023"
+                companyImage="/experience/Daystar.jpg"
+                companyImageAlt="Daystar Limited"
+            >
+            </ExperiencePosition>
+
+            <ExperiencePosition
+                companyTitle="Trent University"
+                companyLink="https://www.trentu.ca/cois/"
+                positionTitle="Undergraduate Academic Asssistant"
+                positionDates="Jan 2023 - Apr 2023"
+                companyImage="/experience/Trent.png"
+                companyImageAlt="Daystar Limited"
+            >
+            </ExperiencePosition>
+
+            <ExperiencePosition
+                companyTitle="Trent University"
+                companyLink="https://www.trentu.ca/cois/"
+                positionTitle="Undergraduate Student Marker"
+                positionDates="Jan 2022 - Apr 2022"
+                companyImage="/experience/Trent.png"
+                companyImageAlt="Daystar Limited"
+            >
+            </ExperiencePosition>
+
+            <ExperiencePosition
+                companyTitle="Epic Systems"
+                companyLink="https://www.prhc.on.ca/patients-visitors/epic/"
+                positionTitle="Epic Go-Live IT Support Specialist"
+                positionDates="Oct 2021 - Dec 2021"
+                companyImage="/experience/Epic.png"
+                companyImageAlt="Daystar Limited"
+            >
+            </ExperiencePosition>
+        </div>
+    
+    </div>	<!--  Div container of content  -->
+</section>
+
+<script>
+	//Callback function for intersectionObserver API
+	const callback = function (entries: any) {
+		entries.forEach((entry: any) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("animate-slideInUp");
+			}
+		});
+	};
+
+	//Create an observer
+	const observer = new IntersectionObserver(callback);
+
+	//Observe when the selected element enters viewport
+	document.querySelectorAll(".slideIn").forEach(function (target) {
+		observer.observe(target);
+	});
+</script>
