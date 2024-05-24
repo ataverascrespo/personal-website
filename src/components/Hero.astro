@@ -15,7 +15,7 @@ import json from '@/data/particleOptions.json';
     <!-- Div container for hero content -->
     <div class="flex flex-row items-center justify-center md:justify-start">
       <!-- Hero header / text -->
-      <div class="zoomIn flex flex-col justify-center text-center md:text-left">
+      <div class="zoomIn flex flex-col justify-center text-center md:text-left w-full sm:w-auto">
         
         <h1 class="h-[3rem] md:h-[4rem] lg:h-[5.5rem] xl:h-[7rem] text-3xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-loose animate-text bg-gradient-to-r from-emerald-500 via-purple-500 to-red-500 bg-clip-text text-transparent">
           Alex Taveras-Crespo
@@ -28,30 +28,22 @@ import json from '@/data/particleOptions.json';
 
         <!-- Div for buttons -->
         <div class="flex flex-row justify-center sm:justify-start gap-2 mt-6">
-          <Button
-            variant={"secondary"}
-            size={"sm"}
-            className="w-1/3 sm:w-1/2 lg:w-1/4 xl:w-1/5 hover:-translate-y-1 duration-200 transition-all hover:shadow-md"
-          >
-            <a
-              href="https://github.com/ataverascrespo"
-              class="flex flex-row gap-2 items-center p-4"
-            >
-              <p class="hidden sm:block">Find me on</p>
+          <Button variant={"secondary"} size={"sm"} className="w-1/3 sm:w-1/2 lg:w-1/4 xl:w-1/5 hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
+            <a href="https://github.com/ataverascrespo" class="flex flex-row gap-2 items-center p-4">
+              <p class="hidden md:block">Find me on</p>
               <img src="/github.svg" alt="github" />
             </a>
           </Button>
-          <Button
-            variant={"secondary"}
-            size={"sm"}
-            className="w-1/3 sm:w-1/2 lg:w-1/4 xl:w-1/5 hover:-translate-y-1 duration-200 transition-all hover:shadow-md"
-          >
-            <a
-              href="https://www.linkedin.com/in/alex-taveras-crespo/"
-              class="flex flex-row gap-2 items-center p-4"
-            >
-              <p class="hidden sm:block">Connect via</p>
-              <img src="/linkedIn.svg" alt="github" />
+          <Button variant={"secondary"} size={"sm"} className="w-1/3 sm:w-1/2 lg:w-1/4 xl:w-1/5 hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
+            <a href="https://www.linkedin.com/in/alex-taveras-crespo/" class="flex flex-row gap-2 items-center p-4">
+              <p class="hidden md:block">Connect via</p>
+              <img src="/linkedIn.svg" alt="linkedin" />
+            </a>
+          </Button>
+          <Button variant={"secondary"} size={"sm"} className="w-1/3 sm:w-1/2 lg:w-1/4 xl:w-1/5 hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
+            <a href="https://blog.alextaverascrespo.com/" class="flex flex-row gap-2 items-center p-4">
+              <p class="hidden md:block">My blog</p>
+              <img class="h-[18px] w-[18px]" src="/hashnode-small.png" alt="hashnode" />
             </a>
           </Button>
         </div>
