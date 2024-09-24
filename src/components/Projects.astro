@@ -4,58 +4,51 @@ import ProjectsCard from "./ProjectsCard.astro";
 ---
 
 <!-- Section container -->
-<section id="projects" class="w-full h-full py-12 md:py-24 lg:py-32">
+<section id="projects" class="w-full h-full py-6 md:py-24 lg:py-32">
 
 	<!--  Div container of content  -->
     <div class="flex flex-col items-center justify-center gap-3 container w-full">
 
 		<!-- Content header -->
-        <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl flex w-full items-center text-white font-bold text-center pb-4 before:mr-4 before:block before:h-px before:flex-grow before:bg-white after:ml-4 after:block after:h-px after:flex-grow after:bg-white">
-            My Projects
-        </h1>
-
-        <h2 class="text-xl md:text-2xl text-center">Some of my projects, including academic and personal projects.</h2>
-
-        <div class="mt-24 w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+        <h1 class="text-xl md:text-3xl flex w-full items-center text-neutral-500 font-bold tracking-tight text-center pb-4 before:mr-4 before:block before:h-px before:flex-grow before:bg-neutral-500 after:ml-4 after:block after:h-px after:flex-grow after:bg-neutral-500">
+			My Projects
+		</h1>
+        
+        <div class="mt-24 w-full grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
             <ProjectsCard 
                 cardTitle="Record Rack" 
                 cardImage="/recordrack.png" 
-                cardLink="/projects/record-rack" 
-                cardTechnologies=".NET 7, PostgreSQL, React, TypeScript, Tailwind CSS, Docker, AWS, Nginx"
-                cardTransition="record-rack image">
-            </ProjectsCard>
+                cardLinkDesc="recordrack.ca"
+                cardLink="https://recordrack.ca/alextaveras2/" 
+                cardDesc=`A progressive web app that lets you 'collect' your favorite albums and tracks through Spotify API integration. Then, you can follow other users, and engage with their collections by leaving likes!`
+                cardTechnologies=".NET 8, PostgreSQL, React, TypeScript, Tailwind CSS, Docker, AWS, GitHub Actions"
+            />
 
             <ProjectsCard 
                 cardTitle="OMG Mobile App" 
                 cardImage="/omgmobile.png" 
-                cardLink="/projects/omg-mobile" 
+                cardLink="/OMGMobilePresentation.pdf"
+                cardLinkDesc="OMG Mobile Presentation"
+                cardDesc="My university capstone project developed for a local client. Uses Dart and Flutter for cross-platform functionality, with Firebase integration for real-time analytics and user authentication. Final grade of 96%." 
                 cardTechnologies="Dart, Flutter SDK, Firebase (Firestore, Cloud Functions), JavaScript"
-                cardTransition="omg-mobile image">
-            </ProjectsCard>
-
+            />
             <ProjectsCard 
-                cardTitle="Gen-EVA - OPS/Microsoft Hackathon" 
+                cardTitle="Gen-EVA: OPS/Microsoft Hackathon" 
                 cardImage="/gen-eva.png" 
-                cardLink="/projects/gen-eva" 
-                cardTechnologies="Azure AI, OpenAI GPT-4 LLM, .NET 8, Cosmos DB"
-                cardTransition="gen-eva image">
-            </ProjectsCard>
+                cardLink="#projects" 
+                cardLinkDesc="N/A"
+                cardDesc="Generative Enterprise Virtual Assistant, an AI tool designed for a Microsoft-sponsored hackathon. Built to enhance the Ontario Public Service career portal, enabling natural language searches and resume scanning for quicker searches. Won 3rd place in it's category." 
+                cardTechnologies="Azure AI, OpenAI GPT-4 LLM, .NET 8"
+            />
 
             <ProjectsCard 
                 cardTitle="Perlin Noise Minecraft Sim" 
                 cardImage="/perlin.png" 
-                cardLink="/projects/perlin-noise-minecraft" 
+                cardDesc="A Unity game developed for my Computer Graphics course at Trent. It lets you generate and manipulate Minecraft-style terrains using the Perlin Noise algorithm, transforming wavelengths into dynamic 3D landscapes."
+                cardLinkDesc="Live Demo"
+                cardLink="https://ataverascrespo.itch.io/minecraft-perlin-noise" 
                 cardTechnologies="C#, Unity, WebGL"
-                cardTransition="perlin-noise image">
-            </ProjectsCard>
-
-            <ProjectsCard 
-                cardTitle="C Directory File Scan" 
-                cardImage="/file-scan.png" 
-                cardLink="/projects/directory-file-scan" 
-                cardTechnologies="C, Linux"
-                cardTransition="file-scan image">
-            </ProjectsCard>
+            />
         </div>
 
         
