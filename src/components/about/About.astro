@@ -1,7 +1,7 @@
 ---
 import { Prism } from '@astrojs/prism';
 import HobbiesSkills from './HobbiesSkills.astro';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 ---
 
 <!-- Section container -->
@@ -73,19 +73,19 @@ import { Button } from './ui/button';
 			<!--  Buttons div -->
 			<div class="flex flex-row justify-center sm:justify-start gap-2 w-full h-16">
 				<Button variant={"secondary"} size={"sm"} className="w-full h-full hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
-					<a href="https://github.com/ataverascrespo" class="flex flex-row gap-2 items-center p-4">
+					<a href="https://github.com/ataverascrespo" class="w-full h-full flex flex-row gap-2 items-center justify-center p-4">
 						<p class="hidden md:block">GitHub</p>
 						<img src="/github.svg" alt="github" />
 					</a>
 				</Button>
 				<Button variant={"secondary"} size={"sm"} className="w-full h-full hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
-					<a href="https://www.linkedin.com/in/alex-taveras-crespo/" class="flex flex-row gap-2 items-center p-4">
+					<a href="https://www.linkedin.com/in/alex-taveras-crespo/" class="w-full h-full flex flex-row gap-2 items-center justify-center p-4">
 						<p class="hidden md:block">LinkedIn</p>
 						<img src="/linkedIn.svg" alt="linkedin" />
 					</a>
 				</Button>
 				<Button variant={"secondary"} size={"sm"} className="w-full h-full hover:-translate-y-1 duration-200 transition-all hover:shadow-md">
-					<a href="https://blog.alextaverascrespo.com/" class="flex flex-row gap-2 items-center p-4">
+					<a href="https://blog.alextaverascrespo.com/" class="w-full h-full flex flex-row gap-2 items-center justify-center p-4">
 						<p class="hidden md:block">Hashnode</p>
 						<img class="h-[18px] w-[18px]" src="/hashnode-small.png" alt="hashnode" />
 					</a>

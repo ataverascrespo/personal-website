@@ -6,7 +6,7 @@ export default function Slider(props) {
     <Carousel width="275px" showStatus={false} depth={4} autoPlay={false} transitionTime={500} spread={"wide"} client:only="react">
         <ExperienceCard
             companyTitle="Nasdaq Verafin"
-            positionTitle="Software Developer"
+            positionTitle="Senior Software Developer"
             positionDates="Aug 2024 - Present"
             companyImage="/experience/nasdaq.png"
             companyImageAlt="Daystar Limited"
@@ -22,7 +22,7 @@ export default function Slider(props) {
         
         <ExperienceCard
             companyTitle="Daystar Limited"
-            positionTitle="Software Developer Intern"
+            positionTitle="Software Developer"
             positionDates="Apr 2022 - Aug 2023"
             companyImage="/experience/Daystar.png"
             companyImageAlt="Daystar Limited"
