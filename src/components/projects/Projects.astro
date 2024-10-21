@@ -10,11 +10,11 @@ import ProjectsCard from "./ProjectsCard.astro";
     <div class="flex flex-col items-center justify-center gap-3 container w-full">
 
 		<!-- Content header -->
-        <h1 class="text-xl md:text-3xl flex w-full items-center text-neutral-500 font-bold tracking-tight text-center pb-4 before:mr-4 before:block before:h-px before:flex-grow before:bg-neutral-500 after:ml-4 after:block after:h-px after:flex-grow after:bg-neutral-500">
+        <h1 class="text-xl md:text-3xl flex h-full w-full items-center text-neutral-500 font-bold tracking-tight text-center pb-4 before:mr-4 before:block before:h-px before:flex-grow before:bg-neutral-500 after:ml-4 after:block after:h-px after:flex-grow after:bg-neutral-500">
 			My Projects
 		</h1>
         
-        <div class="mt-24 w-full grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+        <div class="mt-24 w-full flex flex-col md:grid md:grid-cols-2 gap-12 md:gap-20">
             <ProjectsCard 
                 cardTitle="Record Rack" 
                 cardImage="/recordrack.png" 
@@ -33,7 +33,7 @@ import ProjectsCard from "./ProjectsCard.astro";
                 cardTechnologies="Dart, Flutter SDK, Firebase (Firestore, Cloud Functions), JavaScript"
             />
             <ProjectsCard 
-                cardTitle="Gen-EVA: OPS/Microsoft Hackathon" 
+                cardTitle="Gen-EVA" 
                 cardImage="/gen-eva.png" 
                 cardLink="#projects" 
                 cardLinkDesc="N/A"
